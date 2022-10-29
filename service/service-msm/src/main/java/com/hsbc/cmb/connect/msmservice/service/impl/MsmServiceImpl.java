@@ -8,6 +8,7 @@ import com.aliyuncs.IAcsClient;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.hsbc.cmb.connect.msmservice.service.MsmService;
+import com.hsbc.cmb.connect.msmservice.utils.ConstantMsmUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -21,7 +22,7 @@ public class MsmServiceImpl implements MsmService {
     public boolean send(Map<String, Object> param, String phone) {
         if(StringUtils.isEmpty(phone)) return false;
 
-        DefaultProfile profile = DefaultProfile.getProfile("default", "LTAI5tMNvXGDwdr8VEecXfhA", "rmVal8ncyStgFpxPEiXXCKxTFbjAvz");
+        DefaultProfile profile = DefaultProfile.getProfile("default", ConstantMsmUtils.ACCESS_KEY_ID, ConstantMsmUtils.ACCESS_KEY_SECRET);
         IAcsClient client = new DefaultAcsClient(profile);
 
         //设置相关固定的参数

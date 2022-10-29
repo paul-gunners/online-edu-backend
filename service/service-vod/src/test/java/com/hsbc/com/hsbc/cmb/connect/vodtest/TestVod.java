@@ -21,7 +21,7 @@ public class TestVod {
     public void testGetPlayInfo() throws ClientException {
 
         //初始化客户端、请求对象和相应对象
-        DefaultAcsClient client = initVodClient("LTAI5tMNvXGDwdr8VEecXfhA", "rmVal8ncyStgFpxPEiXXCKxTFbjAvz");
+        DefaultAcsClient client = initVodClient("ENC(vAkA3YWCgm7QsQ67lmYKrFkywWR9Qqm+X4hrOv+mMJoKQMcqZIG9fQ==)", "ENC(XC/FZyUOhXKcSNEFkJZP7uWNyiuAsRxuM7GW2NNmDrx5OiPcRDdwCQ==)");
         GetPlayInfoRequest request = new GetPlayInfoRequest();
         GetPlayInfoResponse response = new GetPlayInfoResponse();
 
@@ -55,7 +55,7 @@ public class TestVod {
     @Test
     public void testGetVideoPlayAuth() throws ClientException {
         //初始化客户端、请求对象和相应对象
-        DefaultAcsClient client = initVodClient("LTAI5tMNvXGDwdr8VEecXfhA", "rmVal8ncyStgFpxPEiXXCKxTFbjAvz");
+        DefaultAcsClient client = initVodClient("ENC(vAkA3YWCgm7QsQ67lmYKrFkywWR9Qqm+X4hrOv+mMJoKQMcqZIG9fQ==)", "ENC(XC/FZyUOhXKcSNEFkJZP7uWNyiuAsRxuM7GW2NNmDrx5OiPcRDdwCQ==)");
         GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
         GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
         try {
@@ -80,8 +80,8 @@ public class TestVod {
     @Test
     public void testUploadVideo() throws ClientException {
 
-        String accessKeyId = "LTAI5tMNvXGDwdr8VEecXfhA";
-        String accessKeySecret = "rmVal8ncyStgFpxPEiXXCKxTFbjAvz";
+        String accessKeyId = "ENC(vAkA3YWCgm7QsQ67lmYKrFkywWR9Qqm+X4hrOv+mMJoKQMcqZIG9fQ==)";
+        String accessKeySecret = "ENC(XC/FZyUOhXKcSNEFkJZP7uWNyiuAsRxuM7GW2NNmDrx5OiPcRDdwCQ==)";
 
         String title = "6 - What If I Want to Move Faster - upload by sdk";   //上传之后文件名称
         String fileName = "D:/JavaProj/OnlineEdu/6 - What If I Want to Move Faster.mp4";  //本地文件路径和名称

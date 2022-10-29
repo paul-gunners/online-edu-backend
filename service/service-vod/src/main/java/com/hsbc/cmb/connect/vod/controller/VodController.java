@@ -17,7 +17,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/eduvod/video")
-
 public class VodController {
 
     @Autowired
